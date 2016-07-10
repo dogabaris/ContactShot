@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">RandomShot</string>
     <string name="mesaj">Mesaj</string>
     <string name="arama">Arama</string>
-    <string name="RandomKisi">Rastgele Kisi Seç!</string>
+    <string name="RandomKisi">RASTGELE KISI SEÇ!</string>
     <string name="permission_contacts_denied">Izin vermezseniz kisilere ulasilamaz!</string>
     <string name="permission_contacts_rationale">Kullanici izni rastgele atmak icin gerekli.</string>
     <string name="contacts_empty">Kullanicilar Yuklenemedi.</string>
