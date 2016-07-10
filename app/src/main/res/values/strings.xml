@@ -3,5 +3,11 @@
     <string name="mesaj">Mesaj</string>
     <string name="arama">Arama</string>
     <string name="RandomKisi">Rastgele Kisi Seç!</string>
-
+    <string name="permission_contacts_denied">Izin vermezseniz kisilere ulasilamaz!</string>
+    <string name="permission_contacts_rationale">Kullanici izni rastgele atmak icin gerekli.</string>
+    <string name="contacts_empty">Kullanicilar Yuklenemedi.</string>
+    <string name="contacts_string" translatable="false">Total number of contacts: %1$,d\nFirst contact:<b>%2$s</b></string>
+    <string name="permission_contacts_never_askagain">Camera permission was denied with never ask again.</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_deny">Deny</string>
 </resources>
