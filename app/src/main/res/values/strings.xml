@@ -8,6 +8,7 @@
     <string name="contacts_empty">Kullanicilar Yuklenemedi.</string>
     <string name="contacts_string" translatable="false">Total number of contacts: %1$,d\nFirst contact:<b>%2$s</b></string>
     <string name="permission_contacts_never_askagain">Camera permission was denied with never ask again.</string>
-    <string name="button_allow">Allow</string>
-    <string name="button_deny">Deny</string>
+    <string name="numara" translatable="false">Numara</string>
+    <string name="ara">Ara!</string>
+    <string name="kisi" translatable="false">Kişi</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.bigapps.doga.contactshot;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -46,8 +48,10 @@ public class Arama extends Fragment{
         final TextView kisi_tv = (TextView) view.findViewById(R.id.contact_tv);
         final TextView numara_tv = (TextView) view.findViewById(R.id.number_tv);
 
-        FButton fButton = (FButton) view.findViewById(R.id.randomara_btn);
-        fButton.setOnClickListener(new View.OnClickListener() {
+        FButton randomAt = (FButton) view.findViewById(R.id.randomara_btn);
+        FButton ara = (FButton) view.findViewById(R.id.ara_btn);
+
+        randomAt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -65,12 +69,22 @@ public class Arama extends Fragment{
                         random = contacts.get(new Random().nextInt(contacts.size()));
                     }
                 }
+                numara_tv.setVisibility(View.VISIBLE);
                 numara_tv.setText(numara);
+                kisi_tv.setVisibility(View.VISIBLE);
                 kisi_tv.setText(isim);
 
             }
         });
 
+        ara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:"+numara));
+                startActivity(callIntent);
+            }
+        });
 
         return view;
     }
