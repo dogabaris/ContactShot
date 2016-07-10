@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">RandomShot</string>
+    <string name="mesaj">Mesaj</string>
+    <string name="arama">Arama</string>
+    <string name="RandomKisi">Rastgele Kisi Seç!</string>
+
+</resources>
