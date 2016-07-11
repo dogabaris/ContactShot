@@ -2,10 +2,13 @@
 <resources>
     <string name="arama">Call</string>
     <string name="mesaj">Message</string>
-    <string name="RandomKisi">Randomize Contact!</string>
+    <string name="RandomKisi">Randomize contact!</string>
     <string name="permission_contacts_denied">You can\'t use application if you don\'t allow to access your contacts!</string>
     <string name="permission_contacts_rationale">Contacts permission is needed to show the person who randomized.</string>
     <string name="contacts_empty">Contacts not loaded.</string>
-    <string name="kisi"></string>
+    <string name="kisi">Contact</string>
     <string name="ara">Call!</string>
+    <string name="mmesaj">Message:</string>
+    <string name="gonder">Send</string>
+    <string name="mara">Randomize contact!</string>
 </resources>

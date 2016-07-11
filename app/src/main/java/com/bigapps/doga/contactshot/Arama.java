@@ -48,7 +48,7 @@ public class Arama extends Fragment{
         final TextView kisi_tv = (TextView) view.findViewById(R.id.contact_tv);
         final TextView numara_tv = (TextView) view.findViewById(R.id.number_tv);
 
-        FButton randomAt = (FButton) view.findViewById(R.id.randomara_btn);
+        FButton randomAt = (FButton) view.findViewById(R.id.mrandomara_btn);
         FButton ara = (FButton) view.findViewById(R.id.ara_btn);
 
         randomAt.setOnClickListener(new View.OnClickListener() {

@@ -2,13 +2,13 @@
     <string name="app_name" translatable="false">RandomShot</string>
     <string name="mesaj">Mesaj</string>
     <string name="arama">Arama</string>
-    <string name="RandomKisi">RASTGELE KISI SEÇ!</string>
+    <string name="RandomKisi">Rastgele kisi seç!</string>
     <string name="permission_contacts_denied">Izin vermezseniz kisilere ulasilamaz!</string>
     <string name="permission_contacts_rationale">Kullanici izni rastgele atmak icin gerekli.</string>
-    <string name="contacts_empty">Kullanicilar Yuklenemedi.</string>
-    <string name="contacts_string" translatable="false">Total number of contacts: %1$,d\nFirst contact:<b>%2$s</b></string>
-    <string name="permission_contacts_never_askagain">Camera permission was denied with never ask again.</string>
     <string name="numara" translatable="false">Numara</string>
     <string name="ara">Ara!</string>
     <string name="kisi" translatable="false">Kişi</string>
+    <string name="mmesaj" >Mesaj:</string>
+    <string name="mara">Rastgele kisi seç!</string>
+    <string name="gonder">Gönder</string>
 </resources>
