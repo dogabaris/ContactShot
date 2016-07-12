@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
                         .setFontAttrId(R.attr.fontPath)
                         .build());
 
-        /*MobileAds.initialize(getApplicationContext(), "ca-app-pub-6164922138244802/1205070977");
+        //MobileAds.initialize(this, "ca-app-pub-6164922138244802/2821404973");
+
+        /*MobileAds.initialize(getApplicationContext(), "ca-app-pub-6164922138244802/2821404973");
 
         // Create the InterstitialAd and set the adUnitId.
         mInterstitialAd = new InterstitialAd(this);
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     @Override

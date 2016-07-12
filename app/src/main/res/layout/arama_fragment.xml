@@ -55,7 +55,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="42dp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:textColor="@color/abc_input_method_navigation_guard" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -74,8 +75,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_below="@+id/ara_btn"
+        ads:adUnitId="ca-app-pub-6164922138244802/2821404973"
+        android:layout_above="@+id/mrandomara_btn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">RandomShot</string>
+    <string name="app_name" translatable="false">ContactShot</string>
     <string name="mesaj">Mesaj</string>
     <string name="arama">Arama</string>
     <string name="RandomKisi">Rastgele kisi seç!</string>
@@ -10,6 +10,6 @@
     <string name="kisi" translatable="false">Kişi</string>
     <string name="mmesaj" >Mesaj:</string>
     <string name="mara">Rastgele kisi seç!</string>
-    <string name="gonder">Gönder</string>
+    <string name="gonder">Gönder!</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6164922138244802/2821404973</string>
 </resources>

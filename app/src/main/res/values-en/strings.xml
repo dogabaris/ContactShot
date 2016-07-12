@@ -9,6 +9,6 @@
     <string name="kisi">Contact</string>
     <string name="ara">Call!</string>
     <string name="mmesaj">Message:</string>
-    <string name="gonder">Send</string>
+    <string name="gonder">Send!</string>
     <string name="mara">Randomize contact!</string>
 </resources>

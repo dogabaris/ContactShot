@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.github.tamir7.contacts.Contact;
 import com.github.tamir7.contacts.Contacts;
+import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 import java.util.Random;
@@ -23,6 +24,7 @@ import info.hoang8f.widget.FButton;
  */
 public class Arama extends Fragment{
     private String numara,isim;
+    private AdView adView;
 
     public Arama() {
         // Required empty public constructor
@@ -35,6 +37,7 @@ public class Arama extends Fragment{
 
         Contacts.initialize(getContext());
 
+
     }
 
 
@@ -44,16 +47,9 @@ public class Arama extends Fragment{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.arama_fragment, container, false);
 
-        /*AdView adview = (AdView) getActivity().findViewById(R.id.adView1);
-
-        // Request for Ads
-        AdRequest adRequest = new AdRequest.Builder()
-
-                // Add a test device to show Test Ads
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR).addTestDevice("")
-                .build();
-
-        adview.loadAd(adRequest);*/
+        AdView adView = (AdView) view.findViewById(R.id.adView1);
+        com.google.android.gms.ads.AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         final TextView kisi_tv = (TextView) view.findViewById(R.id.contact_tv);
         final TextView numara_tv = (TextView) view.findViewById(R.id.number_tv);

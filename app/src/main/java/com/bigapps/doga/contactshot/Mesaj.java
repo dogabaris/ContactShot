@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.github.tamir7.contacts.Contact;
 import com.github.tamir7.contacts.Contacts;
+import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 import java.util.Random;
@@ -41,7 +42,9 @@ public class Mesaj extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.mesaj_fragment, container, false);
 
-
+        AdView adView = (AdView) view.findViewById(R.id.adView2);
+        com.google.android.gms.ads.AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         final TextView kisi_tv = (TextView) view.findViewById(R.id.mcontact_tv);
         final TextView numara_tv = (TextView) view.findViewById(R.id.mnumber_tv);
