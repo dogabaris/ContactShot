@@ -11,4 +11,5 @@
     <string name="mmesaj" >Mesaj:</string>
     <string name="mara">Rastgele kisi seç!</string>
     <string name="gonder">Gönder</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6164922138244802/2821404973</string>
 </resources>

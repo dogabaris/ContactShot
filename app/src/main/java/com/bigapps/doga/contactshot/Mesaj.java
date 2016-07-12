@@ -31,6 +31,8 @@ public class Mesaj extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     @Override
@@ -38,6 +40,8 @@ public class Mesaj extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.mesaj_fragment, container, false);
+
+
 
         final TextView kisi_tv = (TextView) view.findViewById(R.id.mcontact_tv);
         final TextView numara_tv = (TextView) view.findViewById(R.id.mnumber_tv);
