@@ -1,6 +1,8 @@
 package com.bigapps.doga.contactshot;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,8 +11,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Window;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
@@ -24,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private InterstitialAd mInterstitialAd;
+    public boolean flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,20 +42,38 @@ public class MainActivity extends AppCompatActivity {
                         .setFontAttrId(R.attr.fontPath)
                         .build());
 
-        //MobileAds.initialize(this, "ca-app-pub-6164922138244802/2821404973");
 
-        /*MobileAds.initialize(getApplicationContext(), "ca-app-pub-6164922138244802/2821404973");
-
-        // Create the InterstitialAd and set the adUnitId.
         mInterstitialAd = new InterstitialAd(this);
-        // Defined in res/values/strings.xml
-        mInterstitialAd.setAdUnitId(getString(R.string.banner_ad_unit_id));*/
+
+        mInterstitialAd.setAdUnitId(getString(R.string.gecis_ad_unit_id));
+
+        if(isNetworkAvailable())
+            loadGecisReklam();
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                flag=true;
+            }
+
+            @Override
+            public void onAdFailedToLoad(int i) {
+                super.onAdFailedToLoad(i);
+                flag=true;
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                showGecisReklam();
+            }
+        });
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -59,6 +83,35 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void loadGecisReklam() {
+        // reklam yüklenene kadar reklamGoster butonunu disable ediyoruz
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice("0F2A8B170C4A2288C0C1163012BD9176")
+                .build();
+
+        //Reklam Yükleniyor
+        mInterstitialAd.loadAd(adRequest);
+    }
+
+    public void showGecisReklam() {
+        // Tekrar reklam yüklenene kadar disable edilecek
+
+        if (mInterstitialAd.isLoaded()) {//Eğer reklam yüklenmişse kontrol ediliyor
+            mInterstitialAd.show(); //Reklam yüklenmişsse gösterilecek
+        } else
+        {
+            Log.w("contactshot", "Reklam Yüklenemedi!");
+        }
+    }
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -66,8 +119,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Arama(), "Arama");
-        adapter.addFragment(new Mesaj(), "Mesaj");
+        adapter.addFragment(new Arama(), getResources().getString(R.string.arama));
+        adapter.addFragment(new Mesaj(), getResources().getString(R.string.mesaj));
         viewPager.setAdapter(adapter);
     }
 

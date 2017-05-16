@@ -84,7 +84,7 @@ public class Mesaj extends Fragment {
             public void onClick(View view) {
                 SmsManager smsManager =     SmsManager.getDefault();
                 smsManager.sendTextMessage(numara, null, mesaj_et.getText().toString(), null, null);
-                Toast.makeText(getContext(),"Message Sent!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),R.string.sent,Toast.LENGTH_SHORT).show();
             }
         });
 

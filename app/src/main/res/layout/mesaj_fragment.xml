@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:ffbutton="http://schemas.android.com/apk/res-auto"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-    tools:context="com.bigapps.doga.contactshot.MainActivity">
+    tools:context="com.bigapps.doga.contactshot.MainActivity"
+    android:scrollIndicators="none">
 
     <TextView
         android:layout_width="fill_parent"
@@ -13,7 +14,6 @@
         android:text="@string/kisi"
         android:id="@+id/mcontact_tv"
         android:textAlignment="center"
-        android:visibility="invisible"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -38,7 +38,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/mmesaj"
         android:id="@+id/mmsg_tv"
-        android:layout_marginTop="53dp"
         android:layout_below="@+id/mnumber_tv"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -49,7 +48,8 @@
         android:id="@+id/msg_et"
         android:inputType="text"
         android:layout_below="@+id/mmsg_tv"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/abc_input_method_navigation_guard" />
 
     <info.hoang8f.widget.FButton
         ffbutton:buttonColor="@color/ColorPrimary"

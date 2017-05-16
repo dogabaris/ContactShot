@@ -7,9 +7,11 @@
     <string name="permission_contacts_rationale">Kullanici izni rastgele atmak icin gerekli.</string>
     <string name="numara" translatable="false">Numara</string>
     <string name="ara">Ara!</string>
-    <string name="kisi" translatable="false">Kişi</string>
+    <string name="kisi">Rastgele kisi seçin shotlamaya baslayın!</string>
     <string name="mmesaj" >Mesaj:</string>
     <string name="mara">Rastgele kisi seç!</string>
     <string name="gonder">Gönder!</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6164922138244802/2821404973</string>
+    <string name="gecis_ad_unit_id" translatable="false">ca-app-pub-6164922138244802/1205070977</string>
+    <string name="sent">Mesaj Gonderildi!</string>
 </resources>
